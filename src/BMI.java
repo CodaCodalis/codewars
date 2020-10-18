@@ -1,23 +1,22 @@
 public class BMI {
     public static String bmi(double weight, double height) {
-        double bmi = weight / (height * height);
-        if (bmi <= 18.5){
+        double bm = weight / (height * height);
+        if (bm <= 18.5) {
             return "Underweight";
         }
-        if (bmi <= 25.0 & bmi > 18.5){
+        if (bm <= 25.0 & bm > 18.5) {
             return "Normal";
         }
-        if (bmi <= 30.0 & bmi > 25.0){
+        if (bm <= 30.0 & bm > 25.0) {
             return "Overweight";
         }
-        if (bmi > 30.0){
+        if (bm > 30.0) {
             return "Obese";
         }
         return "";
     }
 
     public static void main(String[] args) {
-        bmi(65, 175);
-        System.out.println("");
+        System.out.println(bmi(65, 1.75));
     }
 }

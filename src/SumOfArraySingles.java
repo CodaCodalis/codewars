@@ -18,7 +18,7 @@ public class SumOfArraySingles {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 5, 2, 5, 1, 3, 4};
+        int[] arr = {1, 5, 2, 5, 1, 3, 4, 4, 7};
         repeats(arr);
     }
 }
