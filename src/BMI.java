@@ -20,3 +20,4 @@ public class BMI {
         System.out.println(bmi(65, 1.75));
     }
 }
+
