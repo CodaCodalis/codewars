@@ -11,7 +11,6 @@ public class CrackThePin {
     }
 
     public static String crack(String hash) {
-        // int[] pin inkrementieren von 00000 bis 99999
         for (int i = 0; i < 100000; i++) {
             int k = Integer.toString(i).length();
             if (k == 1) {
