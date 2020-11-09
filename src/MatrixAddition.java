@@ -1,7 +1,5 @@
 public class MatrixAddition {
     public static int[][] matrixAddition(int[][] a, int[][] b) {
-        //int first[][] = a;
-        //int second[][] = b;
         int sum[][] = new int[a.length][a.length];
         for (int c = 0; c < a.length; c++)
             for (int d = 0; d < b.length; d++)
