@@ -1,13 +1,21 @@
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Scanner;
 
 public class CrackThePin {
 
     public static void main(String[] args) {
-        String hash = "86aa400b65433b608a9db30070ec60cd";
-        crack(hash);
-        System.out.println(crack(hash));
+        String hashToPin = hashInput("Hash eingeben: ");
+        crack(hashToPin);
+        System.out.println(crack(hashToPin));
+    }
+    public static String hashInput (String text) {
+        String hash;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print(text);
+        hash = keyboard.next();
+        return hash;
     }
 
     public static String crack(String hash) {
