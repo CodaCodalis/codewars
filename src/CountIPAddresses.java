@@ -1,7 +1,7 @@
 public class CountIPAddresses {
     public static void main(String[] args) {
-        String one = "192.168.178.190";
-        String two = "192.168.178.200";
+        String one = "192.168.178.9";
+        String two = "192.168.178.20";
 
         int[] arrOne = splitBySeparator(one);
         int[] arrTwo = splitBySeparator(two);
@@ -21,16 +21,16 @@ public class CountIPAddresses {
     }
 
     private static String subtractBinaries(String ipTwoAsBinary, String ipOneAsBinary) {
-        long one = Long.parseLong(ipOneAsBinary);
-        long two = Long.parseLong(ipTwoAsBinary);
-        long sum = one + (~two + 1);
-        return Long.toBinaryString(sum);
+        int one = Integer.parseInt(ipOneAsBinary);
+        int two = Integer.parseInt(ipTwoAsBinary);
+        int sum = one + (~two + 1);
+        return Integer.toBinaryString(sum);
     }
 
     private static String convertToBinary(int[] intArr) {
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i <= 3; i++) {
-            int binary[] = new int[8];
+            int[] binary = new int[8];
             int index = 0;
             while (intArr[i] > 0) {
                 binary[index++] = intArr[i] % 2;
@@ -39,12 +39,17 @@ public class CountIPAddresses {
             for (int j = index-1; j >= 0; j--) {
                 sb.append(binary[j]);
             }
+            /*
+            String string = "";
+            sb.toString();
+            while (string.length() <= 8) {
+                string = "0" + sb;
+            }
+             */
             System.out.println("Length: " + sb.toString().length());
             System.out.println("Binary: " + sb);
         }
-
-        String binaryAsStr = sb.toString();
-        return binaryAsStr;
+        return sb.toString();
     }
 
     private static int[] splitBySeparator(String string) {
