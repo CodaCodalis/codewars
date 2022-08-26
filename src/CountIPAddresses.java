@@ -1,7 +1,7 @@
 public class CountIPAddresses {
     public static void main(String[] args) {
-        String one = "192.168.178.10";
-        String two = "192.168.178.20";
+        String one = "192.168.178.190";
+        String two = "192.168.178.200";
 
         int[] arrOne = splitBySeparator(one);
         int[] arrTwo = splitBySeparator(two);
