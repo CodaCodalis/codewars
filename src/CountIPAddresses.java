@@ -1,7 +1,7 @@
 public class CountIPAddresses {
     public static void main(String[] args) {
         String firstIP = "20.0.0.10";
-        String secondIP = "20.0.1.0";
+        String secondIP = "20.2.1.0";
 
         int[] firstIPArr = splitBySeparator(firstIP);
         int[] secondIPArr = splitBySeparator(secondIP);
