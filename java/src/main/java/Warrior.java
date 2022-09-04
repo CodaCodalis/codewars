@@ -47,7 +47,7 @@ public class Warrior {
     }
 
     public ArrayList achievements() {
-        
+
         return this.achievements;
     }
 
