@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Smaller {
     public static int[] smaller(int[] unsorted) {
         int arrLen = unsorted.length;
@@ -23,10 +25,15 @@ public class Smaller {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 0, 2};
+        //int[] arr = {1, 3, 5, 0, 2};
+        int[] arr = new int[30];
+        Random random = new Random();
+        for (int i = 0; i < 30; i++) {
+            arr[i] = random.nextInt(10);
+        }
         int[] arrSmall = smaller(arr);
         for (int i = 0; i < arrSmall.length; i++) {
-            System.out.println(arrSmall[i]);
+            System.out.println(i + " : " + arr[i] + " : " + arrSmall[i]);
         }
     }
 }
