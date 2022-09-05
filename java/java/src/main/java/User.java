@@ -16,6 +16,9 @@ public class User {
             this.progress -= 100;
             this.rank += 1;
         }
+        if (this.rank == 0) {
+            this.rank += 1;
+        }
         return this.progress;
     }
 }
