@@ -1,5 +1,3 @@
-package src.main.java;
-
 import java.util.ArrayList;
 
 public class Warrior {
@@ -42,7 +40,7 @@ public class Warrior {
             this.rank = rankArr[8];
         } else if (this.level <= 100) {
             this.rank = rankArr[9];
-    }
+        }
         return this.rank;
     }
 
@@ -72,8 +70,9 @@ public class Warrior {
         } else if (this.level >= enemyLevel - 2) {
             // 0 experience
         } else if (this.level > enemyLevel) {
-            
+
         }
         return "A good fight";
     }
 }
+
