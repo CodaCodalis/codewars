@@ -26,7 +26,7 @@ class MultiplesOfThreeAndFive
         }
         $sum_three = ($counter_three * ($counter_three + 1) / 2) * 3;
         $sum_five = ($counter_five * ($counter_five + 1) / 2) * 5;
-        $sum_both = ($counter_both * ($counter_both + 1) / 3) * 15;
+        $sum_both = ($counter_both * ($counter_both + 1) / 2) * 15;
 
         return $sum_three + $sum_five - $sum_both;
 
