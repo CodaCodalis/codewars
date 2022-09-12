@@ -7,9 +7,7 @@ def max_sequence(arr):
     if arr_len > 4:
         for i in range(0, arr_len - 3):
             max_seq = arr[i]
-            start = i + 1
-            end = i + 3
-            for j in range(start, end + 1):
+            for j in range(i + 1, i + 4):
                 max_seq += arr[j]
             if max_seq > max_abs:
                 max_abs = max_seq
