@@ -79,8 +79,25 @@ def count_fives(num):
         n_factor -= 1
         if n_arr[i] <= 5:
             n_count_five += n_arr[i] * (10 ** n_factor - 9 ** n_factor)
+            if n_arr[i] == 5:
+                n_count_five += num_contains_five(n_arr, i, n_arr_l)
+                break
         else:
             n_count_five += (10 ** (n_factor + 1) - 9 ** (n_factor + 1)) - (10 - n_arr[i]) * (
                         10 ** n_factor - 9 ** n_factor)
 
     return n_count_five
+
+
+def num_contains_five(n_arr, ind, n_arr_l):
+    if ind == n_arr_l - 1:
+        return 1
+    else:
+        remaining_nums_arr = []
+        for k in range(ind+1, n_arr_l):
+            remaining_nums_arr.append(n_arr[k])
+        remaining_nums_str = "".join(str(x) for x in remaining_nums_arr)
+        remaining_nums = int(remaining_nums_str)
+        if n_arr[n_arr_l-1] == 5:
+            remaining_nums += 1
+        return remaining_nums

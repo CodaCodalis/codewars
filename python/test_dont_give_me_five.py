@@ -17,10 +17,8 @@ class TestDontGiveMeFive(unittest.TestCase):
         self.assertEqual(2449, dont_give_me_five(984, 4304))
         self.assertEqual(4, dont_give_me_five(2313, 2317))
         self.assertEqual(2194, dont_give_me_five(-4436, -1429))
-        # self.assertEqual(4819, dont_give_me_five(-4045, 2575))
+        self.assertEqual(4819, dont_give_me_five(-4045, 2575))
 
-
-'''
     def test_huge_num(self):
         self.assertEqual(326131553237897713, dont_give_me_five(40076, 2151514229639903569))
         self.assertEqual(340132150309630357, dont_give_me_five(-206981731, 2235756979031654521))
@@ -32,4 +30,3 @@ class TestDontGiveMeFive(unittest.TestCase):
         self.assertEqual(9, dont_give_me_five(5, 15))
         self.assertEqual(9, dont_give_me_five(-5, 4))
         self.assertEqual(1, dont_give_me_five(51, 60))
-'''
