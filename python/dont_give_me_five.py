@@ -66,6 +66,24 @@ def dont_give_me_five(start, end):
         total = end - start + 1
         fives = e_count_five - s_count_five
 
+    start_arr = [int(x) for x in str(start)]
+    start5 = start_arr.count(5)
+    end_arr = [int(x) for x in str(end)]
+    end5 = end_arr.count(5)
+
+    if start5 > 0:
+        fives += 1
+        if s_neg and not e_neg:
+            fives -= 1
+        if s_neg and e_neg:
+            if end5 == 0:
+                fives -= 1
+
+    if start5 == 0:
+        if s_neg and e_neg:
+            if not end5 == 0:
+                fives += 1
+
     return total - fives
 
 
@@ -81,23 +99,21 @@ def count_fives(num):
             n_count_five += n_arr[i] * (10 ** n_factor - 9 ** n_factor)
             if n_arr[i] == 5:
                 n_count_five += num_contains_five(n_arr, i, n_arr_l)
+                n_count_five += 1
                 break
         else:
             n_count_five += (10 ** (n_factor + 1) - 9 ** (n_factor + 1)) - (10 - n_arr[i]) * (
-                        10 ** n_factor - 9 ** n_factor)
+                    10 ** n_factor - 9 ** n_factor)
 
     return n_count_five
 
 
 def num_contains_five(n_arr, ind, n_arr_l):
     if ind == n_arr_l - 1:
-        return 1
+        return 0
     else:
         remaining_nums_arr = []
-        for k in range(ind+1, n_arr_l):
+        for k in range(ind + 1, n_arr_l):
             remaining_nums_arr.append(n_arr[k])
         remaining_nums_str = "".join(str(x) for x in remaining_nums_arr)
-        remaining_nums = int(remaining_nums_str)
-        if n_arr[n_arr_l-1] == 5:
-            remaining_nums += 1
-        return remaining_nums
+        return int(remaining_nums_str)
