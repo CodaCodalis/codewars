@@ -1,6 +1,3 @@
-import itertools
-
-
 def next_smaller(n):
     nstr = str(n)
     nstrarr = split_str(nstr)
